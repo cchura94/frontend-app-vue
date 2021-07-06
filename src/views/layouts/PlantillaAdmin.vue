@@ -1,5 +1,14 @@
 <template>
-  <h1>Plantilla Admin</h1>
+ 
+<div id="nav">
+    <router-link to="/admin">Administrador Principal</router-link> |
+    <router-link to="/admin/categoria">Categoria</router-link> |
+    <router-link to="/admin/producto">Producto</router-link>
+  </div>
+
+   <router-view/>
+ 
+
 </template>
 
 <script>
