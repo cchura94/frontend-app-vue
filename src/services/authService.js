@@ -1,9 +1,9 @@
-import axios from "axios";
+import { http } from "./http"
 
 // fun simple
 export async function login(params) {
     /*
-    axios.post("http://localhost:8000/api/auth/login", params)
+    http().post("http://localhost:8000/api/auth/login", params)
         .then(function(res) {
             console.log(res);
         }).catch((error) => {
@@ -11,19 +11,9 @@ export async function login(params) {
         });
     */
    try{
-       let res = await axios.post("http://localhost:8000/api/auth/login", params)
-       console.log(res);
+       return await http().post("/auth/login", params)
+       
    }catch(error){
         console.log(error);
    }
-}
-
-// fun anonima
-export const login2 = async function(params){
-
-}
-
-// fun flecha
-export const login3 = async (params) => {
-
 }
